@@ -21,8 +21,8 @@ import pandas as pd
 
 # ---- Tunable thresholds -----------------------------------------------------
 WINDOW = "10min"          # sliding time window for counting failures (used 10 min industry standard)
-FAIL_THRESHOLD = 5      # an IP is flagged for a burst only if it fails 5 or more times within 10 minutes - human users rarely fail more than 2-5 times in a row
-USERNAME_THRESHOLD = 4    # number of distinct usernames tried by one IP set to 4, human users rarely try more than 2-3 usernames in a row
+FAIL_THRESHOLD = 5        # an IP is flagged for a burst only if it fails 5 or more times within 10 minutes - human users rarely fail more than 2-5 times in a row
+USERNAME_THRESHOLD = 4    # number of distinct usernames tried by one IP set to 4+ to be considered enumeration, human users rarely try more than 2-3 usernames in a row
 LOG_YEAR = 2025           # syslog lines have no year, so we assume one
 
 # ---- Regex patterns for the events we care about ----------------------------
