@@ -3,7 +3,7 @@
 A Python project that parses OpenSSH server logs from a dataset by the Chinese University of Hong Kong downloaded from Loghub. The pipeline flags IP addresses showing brute-force and enumeration behaviour.
 
 ## Motivation 
-While on Mastercard's Digital Enablement Service team this summer, I learned how card testing and BIN attacks are detected: fraudsters cycle through card numbers until one is approved, which shows up as abnormal failure rates from a single source. SSH brute-forcing follows the same pattern, with bots cycling through usernames and passwords until one logs in. I built this to explore how those detection ideas carry over to server security. 
+While on Mastercard's Digital Enablement Service team this summer, I learned how card testing and BIN attacks are detected: fraudsters fix the initial BIN 6 or BIN 8 and then repeatedly generate the remaining 10 digits until a PAN is tested and approved, often in remote commerce websites. In our analysis, this testing shows up through abnormally high tokenization request failure rates. SSH brute-forcing follows the same pattern, with bots cycling through usernames and passwords until one logs in. I built this to explore how those detection ideas carry over to server security. 
 
 ## Detection rules
 | Rule | What it catches | Threshold |
